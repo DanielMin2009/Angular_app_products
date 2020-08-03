@@ -1,7 +1,4 @@
 <main class="animated fadeIn fast no-gutters">
-    <!-- <app-gnome-card *ngFor="let gnome of gnomes.Brastlewark" [gnome]="gnome" (selectedGnome)="viewGnome($event)">
-        </app-gnome-card> -->
-    <!-- this selectedGnome is the Output that comes from this Component and calls the Method viewGnome. It pass the click event from app-gnome-card -->
     <table class="table table-hover">
         <thead>
             <tr>
@@ -13,7 +10,7 @@
         </thead>
         <tbody>
             <tr
-                *ngFor="let product of products | paginate: {id: 'listing-pagination', itemsPerPage: 10, currentPage: page, totalItems: totalProducts }">
+                *ngFor="let product of products | paginate: { id: 'listing-pagination', itemsPerPage: 10, currentPage: page, totalItems: totalProducts }" >
                 <th class="width-46" scope="row">
                     <div class="grey-box"></div>
                 </th>
