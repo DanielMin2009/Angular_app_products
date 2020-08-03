@@ -6,22 +6,11 @@ import { from } from 'rxjs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxPaginationModule } from 'ngx-pagination';
 
-// Angular Material
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatTableModule } from '@angular/material/table';
 
 // Services
 import { ProductsService } from './Services/products.service';
-
-// Models
 
 // Components
 import { NavbarComponent } from './Components/Shared/navbar/navbar.component';
@@ -37,33 +26,15 @@ import { ProductDetailComponent } from './Views/product-detail/product-detail.co
     NavbarComponent,
     PaginatorComponent,
     HomeComponent,
-    ProductDetailComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatDialogModule,
-    MatPaginatorModule,
-    MatTableDataSource,
-    MatTableModule
+    NgxPaginationModule,
   ],
-  exports: [
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatDialogModule,
-    MatPaginatorModule,
-    MatTableDataSource,
-    MatTableModule
-  ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent],
 })

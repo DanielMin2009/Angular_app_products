@@ -1,3 +1,37 @@
-<div>
-    <h1>Hello World</h1>
-</div>
+<main class="animated fadeIn fast no-gutters">
+    <!-- <app-gnome-card *ngFor="let gnome of gnomes.Brastlewark" [gnome]="gnome" (selectedGnome)="viewGnome($event)">
+        </app-gnome-card> -->
+    <!-- this selectedGnome is the Output that comes from this Component and calls the Method viewGnome. It pass the click event from app-gnome-card -->
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th class="width-60" scope="col">Producto</th>
+                <th scope="col">SKU</th>
+                <th scope="col">Código de Barras</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr
+                *ngFor="let product of products | paginate: {id: 'listing-pagination', itemsPerPage: 10, currentPage: page, totalItems: totalProducts }">
+                <th class="width-46" scope="row">
+                    <div class="grey-box"></div>
+                </th>
+                <td class="sku">{{product.sku}}</td>
+                <td class="barcode">{{product.barcode}}</td>
+                <td class="status">{{product.stock.status}}</td>
+                <td class="switch-control">
+                    <label class="switchSmall m5">
+                        <input type="checkbox" checked="">
+                        <small></small>
+                    </label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container-fluid bg-white pagination-box">
+        <pagination-controls id="listing-pagination" class="pagination justify-content-end" maxSize="10"
+            directionLinks="true" (pageChange)="page=$event">
+        </pagination-controls>
+    </div>
+</main>

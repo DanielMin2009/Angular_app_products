@@ -1,0 +1,172 @@
+@import "../../../styles.scss";
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: $dark;
+    margin: auto;
+    background-color: white;
+    padding: 2%;
+    border-radius: $border-radius $border-radius 0 0;
+    @include commonText;
+
+    .grey-box {
+        width: 40px;
+        height: 40px;
+        background-color: rgba($grey, 70%);
+    }
+    th,
+    td {
+        border-bottom: 1px solid darken($color: rgba($light, 96%), $amount: 10%);
+        padding: 1.2rem 2.2rem;
+        vertical-align: middle;
+    }
+    tr:last-child {
+        th,
+        td {
+            border-bottom: none !important;
+        }
+    }
+    th,
+    td,
+    thead th,
+    thead td {
+        border-top: none;
+    }
+    thead {
+        tr {
+            transition: all 0.5s ease-in;
+            th {
+                color: darken($color: rgba($grey, 100%), $amount: 10%);
+                font-weight: 300;
+            }
+        }
+        th {
+            border-bottom: none;
+        }
+    }
+    // Sizing
+    .width-46 {
+        width: 46%;
+    }
+}
+.table-hover tbody tr {
+    transition: all 0.5s ease-in;
+}
+.table-hover tbody tr:hover {
+    color: #000;
+    font-weight: 500;
+    background-color: lighten($color: rgba($grey, 100%), $amount: 30%);
+    cursor: pointer;
+}
+.page-link {
+    color: darken($color: rgba($grey, 100%), $amount: 30%);
+    background-color: white;
+    border: none;
+    @include commonText;
+}
+.pagination-box {
+    border-radius: 0 0 $border-radius $border-radius;
+}
+
+.ngx-pagination .current {
+    background: white !important;
+    color: darken($color: rgba($grey, 100%), $amount: 30%);
+    @include commonText;
+}
+// Switch button
+* {
+    box-sizing: border-box;
+}
+
+.m5 {
+    margin: 0 5px;
+}
+
+.switch {
+    display: inline-block;
+}
+.switch input {
+    display: none;
+}
+.switch small {
+    display: inline-block;
+    width: 43px;
+    height: 18px;
+    background-color: rgba($grey, 70%);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.switch small:after {
+    content: "No";
+    position: absolute;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    width: 100%;
+    left: 0px;
+    text-align: right;
+    padding: 0 6px;
+    box-sizing: border-box;
+    line-height: 18px;
+}
+.switch small:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: 0.2s;
+    box-shadow: -3px 0 3px rgba($grey, 70%);
+}
+.switch input:checked ~ small {
+    background-color: $violet;
+    transition: 0.2s;
+}
+.switch input:checked ~ small:before {
+    transform: translate(25px, 0px);
+    transition: 0.2s;
+}
+.switch input:checked ~ small:after {
+    content: "Yes";
+    text-align: left;
+}
+.switchSmall {
+    display: inline-block;
+}
+.switchSmall input {
+    display: none;
+}
+.switchSmall small {
+    display: inline-block;
+    width: 34px;
+    height: 18px;
+    background-color: rgba($grey, 70%);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.switchSmall small:before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.2s;
+    box-shadow: -3px 0 3px rgba(0, 0, 0, 0.1);
+}
+.switchSmall input:checked ~ small {
+    background-color: $violet;
+    transition: 0.2s;
+}
+.switchSmall input:checked ~ small:before {
+    transform: translate(16px, 0px);
+    transition: 0.2s;
+}

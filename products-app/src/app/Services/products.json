@@ -1,0 +1,401 @@
+[
+    {
+    "id": 0,
+    "name": "Té Matcha",
+    "sku": "72056356",
+    "barcode": "1234567890",
+    "image": "assets/img/batman.png",
+    "price": "4,00",
+    "enabled": true,
+    "stock": {
+      "id": 0,
+      "quantity": 26,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 0,
+        "name": "BCN 2",
+        "city": "Barcelona"
+      }
+    }
+  },
+  {
+    "id": 1,
+    "name": "Té Matcha Premium",
+    "sku": "72056357",
+    "barcode": "1234567891",
+    "image": "assets/img/batman.png",
+    "price": "7,00",
+    "enabled": false,
+    "stock": {
+      "id": 1,
+      "quantity": 16,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 1,
+        "name": "BCN 1",
+        "city": "Barcelona"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Cuchara Medidora",
+    "sku": "72056358",
+    "barcode": "1234567892",
+    "image": "assets/img/batman.png",
+    "price": "2,40",
+    "enabled": true,
+    "stock": {
+      "id": 2,
+      "quantity": 19,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 2,
+        "name": "MAD 2",
+        "city": "Madrid"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "Hair & Nails",
+    "sku": "72056359",
+    "barcode": "1234567893",
+    "image": "assets/img/batman.png",
+    "price": "1,20",
+    "enabled": true,
+    "stock": {
+      "id": 3,
+      "quantity": 5,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 3,
+        "name": "PAR 3",
+        "city": "París"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Bastidor de Bambú Chasan",
+    "sku": "72056360",
+    "barcode": "1234567894",
+    "image": "assets/img/batman.png",
+    "price": "4,00",
+    "enabled": false,
+    "stock": {
+      "id": 4,
+      "quantity": 9,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 4,
+        "name": "MAD 2",
+        "city": "Madrid"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Cuchara Medidora",
+    "sku": "72056361",
+    "barcode": "1234567895",
+    "image": "assets/img/batman.png",
+    "price": "2,40",
+    "enabled": true,
+    "stock": {
+      "id": 5,
+      "quantity": 220,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 5,
+        "name": "MAD 2",
+        "city": "Madrid"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "Té Menta",
+    "sku": "72056362",
+    "barcode": "1234567896",
+    "image": "assets/img/batman.png",
+    "price": "2,50",
+    "enabled": true,
+    "stock": {
+      "id": 6,
+      "quantity": 220,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 6,
+        "name": "BCN 1",
+        "city": "Barcelona"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "name": "Té Naranja",
+    "sku": "72056363",
+    "barcode": "1234567897",
+    "image": "assets/img/batman.png",
+    "price": "2,45",
+    "enabled": true,
+    "stock": {
+      "id": 7,
+      "quantity": 33,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 7,
+        "name": "BCN 5",
+        "city": "Barcelona"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "name": "Té Negro Ecológico",
+    "sku": "72056364",
+    "barcode": "1234567898",
+    "image": "assets/img/batman.png",
+    "price": "2,65",
+    "enabled": true,
+    "stock": {
+      "id": 8,
+      "quantity": 4,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 8,
+        "name": "PAR 3",
+        "city": "París"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "name": "Té Verde Bio",
+    "sku": "72056365",
+    "barcode": "1234567899",
+    "image": "assets/img/batman.png",
+    "price": "2,85",
+    "enabled": true,
+    "stock": {
+      "id": 9,
+      "quantity": 9,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 12,
+        "name": "PAR 3",
+        "city": "París"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "name": "Té Verde",
+    "sku": "72056366",
+    "barcode": "1234567900",
+    "image": "assets/img/batman.png",
+    "price": "2,30",
+    "enabled": true,
+    "stock": {
+      "id": 10,
+      "quantity": 10,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 10,
+        "name": "ZGZ 5",
+        "city": "Zaragoza"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "name": "Té Blanco",
+    "sku": "72056367",
+    "barcode": "1234567901",
+    "image": "assets/img/batman.png",
+    "price": "2,60",
+    "enabled": false,
+    "stock": {
+      "id": 11,
+      "quantity": 80,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 11,
+        "name": "MAD 1",
+        "city": "Madrid"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "name": "Mate Cocido",
+    "sku": "72056368",
+    "barcode": "1234567902",
+    "image": "assets/img/batman.png",
+    "price": "3,20",
+    "enabled": true,
+    "stock": {
+      "id": 12,
+      "quantity": 80,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 12,
+        "name": "PAR 3",
+        "city": "París"
+      }
+    }
+  },
+  {
+    "id": 13,
+    "name": "Yerba Mate",
+    "sku": "72056369",
+    "barcode": "1234567903",
+    "image": "assets/img/batman.png",
+    "price": "4,00",
+    "enabled": true,
+    "stock": {
+      "id": 13,
+      "quantity": 80,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 13,
+        "name": "ZGZ 5",
+        "city": "Zaragoza"
+      }
+    }
+  },
+  {
+    "id": 14,
+    "name": "Café Moka",
+    "sku": "72056370",
+    "barcode": "1234567904",
+    "image": "assets/img/batman.png",
+    "price": "2,55",
+    "enabled": true,
+    "stock": {
+      "id": 14,
+      "quantity": 80,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 14,
+        "name": "PAR 3",
+        "city": "París"
+      }
+    }
+  },
+  {
+    "id": 15,
+    "name": "Café Bar",
+    "sku": "72056371",
+    "barcode": "1234567905",
+    "image": "assets/img/batman.png",
+    "price": "2,75",
+    "enabled": false,
+    "stock": {
+      "id": 15,
+      "quantity": 100,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 15,
+        "name": "PAR 3",
+        "city": "París"
+      }
+    }
+  },
+  {
+    "id": 16,
+    "name": "Café Cápsulas",
+    "sku": "72056372",
+    "barcode": "1234567906",
+    "image": "assets/img/batman.png",
+    "price": "2,15",
+    "enabled": false,
+    "stock": {
+      "id": 16,
+      "quantity": 60,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 16,
+        "name": "MAD 2",
+        "city": "Madrid"
+      }
+    }
+  },
+  {
+    "id": 17,
+    "name": "Verduras Deshidratadas",
+    "sku": "72056373",
+    "barcode": "1234567907",
+    "image": "assets/img/batman.png",
+    "price": "4,15",
+    "enabled": false,
+    "stock": {
+      "id": 17,
+      "quantity": 89,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 17,
+        "name": "OPO 3",
+        "city": "Oporto"
+      }
+    }
+  },
+  {
+    "id": 18,
+    "name": "Patatas Rústicas",
+    "sku": "72056374",
+    "barcode": "1234567908",
+    "image": "assets/img/batman.png",
+    "price": "2,20",
+    "enabled": true,
+    "stock": {
+      "id": 18,
+      "quantity": 89,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 18,
+        "name": "OPO 3",
+        "city": "Oporto"
+      }
+    }
+  },
+  {
+    "id": 19,
+    "name": "Anacardos Sin Sal",
+    "sku": "72056375",
+    "barcode": "1234567909",
+    "image": "assets/img/batman.png",
+    "price": "3,50",
+    "enabled": true,
+    "stock": {
+      "id": 19,
+      "quantity": 3,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 20,
+        "name": "BCN 1",
+        "city": "Barcelona"
+      }
+    }
+  },
+  {
+    "id": 20,
+    "name": "Frutos Secos Variados",
+    "sku": "72056376",
+    "barcode": "1234567910",
+    "image": "assets/img/batman.png",
+    "price": "3,20",
+    "enabled": true,
+    "stock": {
+      "id": 20,
+      "quantity": 6,
+      "status": "Envío en el propio contenedor",
+      "warehouse": {
+        "id": 20,
+        "name": "BCN 2",
+        "city": "Barcelona"
+      }
+    }
+  }
+]
