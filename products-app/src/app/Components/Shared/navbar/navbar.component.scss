@@ -28,12 +28,6 @@
         transition: all ease-in 0.2s;
         cursor: pointer;
     }
-    .arrowBack-icon {
-        text-align: left;
-        &:hover {
-            cursor: pointer;
-        }
-    }
     .add-icon,
     .edit-icon {
         text-align: right;
@@ -46,14 +40,6 @@
             border-radius: 19px;
             border: 3px solid white;
             text-align: center;
-        }
-    }
-    .edit-icon {
-        @media (max-width: 992px) {
-            font-size: 1.8rem;
-        }
-        @media (min-width: 992px) {
-            font-size: 2rem;
         }
     }
 }
