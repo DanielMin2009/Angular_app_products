@@ -16,6 +16,7 @@ import { NavbarComponent } from './Components/Shared/navbar/navbar.component';
 // View Components
 import { HomeComponent } from './Views/home/home.component';
 import { ProductDetailComponent } from './Views/product-detail/product-detail.component';
+import { NavbarDetailComponent } from './Components/Shared/navbar-detail/navbar-detail.component';
 
 //leading to error mentioned
 @NgModule({
@@ -23,7 +24,8 @@ import { ProductDetailComponent } from './Views/product-detail/product-detail.co
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    NavbarDetailComponent
   ],
   imports: [
     BrowserModule,

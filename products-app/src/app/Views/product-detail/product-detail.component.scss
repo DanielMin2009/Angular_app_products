@@ -10,11 +10,23 @@
         font-weight: normal;
     }
     div {
-        padding: 0 0 0 1.2rem;
-        .grey-box {
-            background-color: rgba($grey, 70%);
-            width: 200px;
-            min-height: 200px;
+        div {
+            padding: 0 0 0 1.2rem;
+            .grey-box {
+                background-color: rgba($grey, 70%);
+                @media (max-width: 768px) {
+                    width: 150px;
+                    height: 150px;
+                }
+                @media (min-width: 768px) and (max-width: 992px){
+                    width: 145px;
+                    height: 145px;
+                }
+                @media (min-width: 992px) {
+                    width: 170px;
+                    height: 170px;
+                }
+            }
         }
     }
     ul {

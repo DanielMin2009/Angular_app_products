@@ -9,6 +9,17 @@ import { Observable, from } from 'rxjs';
   styleUrls: ['./product-detail.component.scss'],
 })
 export class ProductDetailComponent implements OnInit {
+
+  placement: any;
+  cities: any[] = [
+    {city: 'Barcelona', country: 'España'},
+    {city: 'Lisboa', country: 'Portugal'},
+    {city: 'Madrid', country: 'España'},
+    {city: 'Oporto', country: 'Portugal'},
+    {city: 'París', country: 'Francia'},
+    {city: 'Zaragoza', country: 'España'}
+  ];
+
   public products: Product[] = [];
   idx: number;
   product: Product;

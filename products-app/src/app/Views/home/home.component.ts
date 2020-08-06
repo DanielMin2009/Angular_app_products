@@ -13,8 +13,9 @@ export class HomeComponent implements OnInit {
   public products: Product[] = [];
   public product: Product;
 
-  totalProducts: number;
-  page: number = 1;
+  public totalProducts: number;
+  public page: number = 1;
+  public itemsPerPage: number = 5;
 
   constructor(
     public _productsService: ProductsService,
@@ -38,6 +39,10 @@ export class HomeComponent implements OnInit {
   }
   viewProduct(idx: number) {
     this.router.navigate(['/product', idx]);
+  }
+
+  showItems(event) {
+    this.itemsPerPage = event.target.value;
   }
 
   toggleActivation(e: any) {

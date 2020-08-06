@@ -200,7 +200,7 @@
     "stock": {
       "id": 10,
       "quantity": 10,
-      "status": "Envío en el propio contenedor",
+      "status": "Obsequio promocional",
       "warehouse": {
         "id": 10,
         "name": "ZGZ 5",
@@ -238,7 +238,7 @@
     "stock": {
       "id": 12,
       "quantity": 80,
-      "status": "Envío en el propio contenedor",
+      "status": "Obsequio promocional",
       "warehouse": {
         "id": 12,
         "name": "PAR 3",
@@ -257,7 +257,7 @@
     "stock": {
       "id": 13,
       "quantity": 80,
-      "status": "Envío en el propio contenedor",
+      "status": "Frágil",
       "warehouse": {
         "id": 13,
         "name": "ZGZ 5",
@@ -276,7 +276,7 @@
     "stock": {
       "id": 14,
       "quantity": 80,
-      "status": "Envío en el propio contenedor",
+      "status": "Frágil",
       "warehouse": {
         "id": 14,
         "name": "PAR 3",
@@ -295,7 +295,7 @@
     "stock": {
       "id": 15,
       "quantity": 100,
-      "status": "Envío en el propio contenedor",
+      "status": "Peligroso",
       "warehouse": {
         "id": 15,
         "name": "PAR 3",
@@ -314,7 +314,7 @@
     "stock": {
       "id": 16,
       "quantity": 60,
-      "status": "Envío en el propio contenedor",
+      "status": "Obsequio promocional",
       "warehouse": {
         "id": 16,
         "name": "MAD 2",
@@ -333,7 +333,7 @@
     "stock": {
       "id": 17,
       "quantity": 89,
-      "status": "Envío en el propio contenedor",
+      "status": "Flyer promocional",
       "warehouse": {
         "id": 17,
         "name": "OPO 3",
@@ -352,7 +352,7 @@
     "stock": {
       "id": 18,
       "quantity": 89,
-      "status": "Envío en el propio contenedor",
+      "status": "Packaging personalizado",
       "warehouse": {
         "id": 18,
         "name": "OPO 3",
@@ -371,7 +371,7 @@
     "stock": {
       "id": 19,
       "quantity": 3,
-      "status": "Envío en el propio contenedor",
+      "status": "Frágil",
       "warehouse": {
         "id": 20,
         "name": "BCN 1",

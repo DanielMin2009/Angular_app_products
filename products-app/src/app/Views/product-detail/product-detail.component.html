@@ -1,10 +1,11 @@
+<app-navbar-detail [product]="product"></app-navbar-detail>
 <main class="container-fluid">
     <div class="row">
         <div class="col-12 col-lg-4 no-gutters">
             <div class="card card-small">
                 <h2>Resumen del producto</h2>
                 <div class="row">
-                    <div class="col-6 grey-box"></div>
+                    <div class="col-6"><div class="grey-box"></div></div>
                     <div class="col-6 card-data">
                         <h3>Producto</h3>
                         <p>{{product.name}}</p>
@@ -16,7 +17,7 @@
                         <p>{{product.barcode}}</p>
 
                         <h3>Precio</h3>
-                        <p></p>
+                        <p>{{product.price}} €</p>
                     </div>
                 </div>
             </div>
@@ -77,6 +78,16 @@
                     <h3>País</h3>
                     <h3>Almacén</h3>
                     <h3>Stock disponible</h3>
+                </div>
+                <div class="inventoryGrid">
+                    <p>{{product.stock.warehouse.city}}</p>
+                    <div [ngSwitch]="placement">
+                        <div *ngSwitchCase="product.stock.warehouse.city == 'Barcelona'">España</div>
+                        
+                        <span *ngSwitchDefault>España</span>
+                    </div>
+                    <p>{{product.stock.warehouse.name}}</p>
+                    <p>{{product.stock.quantity}}</p>
                 </div>
             </div>
         </div>
