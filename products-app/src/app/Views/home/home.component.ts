@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   public totalProducts: number;
   public page: number = 1;
-  public itemsPerPage: number = 5;
+  public itemsPerPage: number = 10;
 
   constructor(
     public _productsService: ProductsService,
@@ -53,5 +53,3 @@ export class HomeComponent implements OnInit {
     return false;
   }
 }
-
-

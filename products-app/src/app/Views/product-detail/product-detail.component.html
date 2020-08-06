@@ -5,7 +5,9 @@
             <div class="card card-small">
                 <h2>Resumen del producto</h2>
                 <div class="row">
-                    <div class="col-6"><div class="grey-box"></div></div>
+                    <div class="col-6">
+                        <div class="grey-box"></div>
+                    </div>
                     <div class="col-6 card-data">
                         <h3>Producto</h3>
                         <p>{{product.name}}</p>
@@ -25,46 +27,36 @@
                 <h2>Requerimientos del packaging</h2>
                 <ul>
                     <li>
-                        <div class="round">
-                            <input type="checkbox" id="checkbox" />
-                            <label for="checkbox"></label>
-                        </div>
+                        <span *ngIf="product.stock.status === 'Packaging personalizado'" class="isThat"></span>
+                        <span *ngIf="product.stock.status != 'Packaging personalizado'"
+                            class="isNotThat"></span>Packaging personalizado
                     </li>
                     <li>
-                        <div class="round">
-                            <input type="checkbox" id="checkbox" />
-                            <label for="checkbox"></label>
-                        </div>
+                        <span *ngIf="product.stock.status === 'Plegable'" class="isThat"></span>
+                        <span *ngIf="product.stock.status != 'Plegable'" class="isNotThat"></span>Plegable
                     </li>
                     <li>
-                        <div class="round">
-                            <input type="checkbox" id="checkbox" />
-                            <label for="checkbox"></label>
-                        </div>
+                        <span *ngIf="product.stock.status === 'Envío en el propio contenedor'" class="isThat"></span>
+                        <span *ngIf="product.stock.status != 'Envío en el propio contenedor'"
+                            class="isNotThat"></span>Envío en el propio contenedor
                     </li>
                     <li>
-                        <div class="round">
-                            <input type="checkbox" id="checkbox" />
-                            <label for="checkbox"></label>
-                        </div>
+                        <span *ngIf="product.stock.status === 'Flyer promocional'" class="isThat"></span>
+                        <span *ngIf="product.stock.status != 'Flyer promocional'" class="isNotThat"></span>Flyer
+                        promocional
                     </li>
                     <li>
-                        <div class="round">
-                            <input type="checkbox" id="checkbox" />
-                            <label for="checkbox"></label>
-                        </div>
+                        <span *ngIf="product.stock.status === 'Obsequio promocional'" class="isThat"></span>
+                        <span *ngIf="product.stock.status != 'Obsequio promocional'" class="isNotThat"></span>Obsequio
+                        promocional
                     </li>
                     <li>
-                        <div class="round">
-                            <input type="checkbox" id="checkbox" />
-                            <label for="checkbox"></label>
-                        </div>
+                        <span *ngIf="product.stock.status === 'Peligroso'" class="isThat"></span>
+                        <span *ngIf="product.stock.status != 'Peligroso'" class="isNotThat"></span>Peligroso
                     </li>
                     <li>
-                        <div class="round">
-                            <input type="checkbox" id="checkbox" />
-                            <label for="checkbox"></label>
-                        </div>
+                        <span *ngIf="product.stock.status === 'Frágil'" class="isThat"></span>
+                        <span *ngIf="product.stock.status != 'Frágil'" class="isNotThat"></span>Frágil
                     </li>
                 </ul>
 
@@ -73,22 +65,22 @@
         <div class="col-12 col-lg-8 bigListDetail">
             <div class="card">
                 <h2>Resumen del producto</h2>
-                <div class="inventoryGrid">
+                <article class="inventoryGrid">
                     <h3>Ciudad</h3>
                     <h3>País</h3>
                     <h3>Almacén</h3>
                     <h3>Stock disponible</h3>
-                </div>
-                <div class="inventoryGrid">
+                </article>
+                <article class="inventoryGrid">
                     <p>{{product.stock.warehouse.city}}</p>
                     <div [ngSwitch]="placement">
                         <div *ngSwitchCase="product.stock.warehouse.city == 'Barcelona'">España</div>
-                        
+
                         <span *ngSwitchDefault>España</span>
                     </div>
                     <p>{{product.stock.warehouse.name}}</p>
                     <p>{{product.stock.quantity}}</p>
-                </div>
+                </article>
             </div>
         </div>
     </div>

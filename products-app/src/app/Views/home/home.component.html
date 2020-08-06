@@ -32,8 +32,8 @@
             <span>Ítems por página</span>
             <select (change)="showItems($event)" class="form-control">
 
-                <option value="5">5</option>
                 <option value="10">10</option>
+                <option value="5">5</option>
                 <option value="20">20</option>
             </select>
         </div>
@@ -42,41 +42,3 @@
         </pagination-controls>
     </div>
 </main>
-
-<!-- <main class="animated fadeIn fast no-gutters">
-    <div class="headerProductsGrid">
-        <div>Producto</div>
-        <div>SKU</div>
-        <div>Código de Barras</div>
-        <div>Estado</div>
-    </div>
-    <button (click)="viewProduct(i)" class="productsGrid"
-        *ngFor="let product of products | paginate: { id: 'listing-pagination', itemsPerPage: 10, currentPage: page, totalItems: totalProducts } let i = index">
-        <div>
-            <div class="grey-box"></div>
-        </div>
-        <div>SKU {{product.sku}}</div>
-        <div>{{product.barcode}}</div>
-        <div class="switch-control">
-            <label class="switchSmall m5 btnSwitch">
-                <input #productBox matInput (click)="toggleActivation($event)" type="checkbox"
-                    checked="">
-                <small></small>
-            </label>
-        </div>
-        <div>{{product.stock.status}}</div> 
-    </button>
-    <div class="bg-white pagination-box paginationGrid">
-        <div>
-            <span>Ítems por página</span>
-            <select class="form-control">
-                <option>20</option>
-                <option>10</option>
-                <option>5</option>
-            </select>
-        </div>
-        <pagination-controls id="listing-pagination" class="pagination justify-content-end" maxSize="10"
-            directionLinks="true" (pageChange)="page=$event">
-        </pagination-controls>
-    </div>
-</main> -->

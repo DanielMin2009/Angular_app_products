@@ -10,7 +10,7 @@
     "stock": {
       "id": 0,
       "quantity": 26,
-      "status": "Envío en el propio contenedor",
+      "status": "Frágil",
       "warehouse": {
         "id": 0,
         "name": "BCN 2",
@@ -48,7 +48,7 @@
     "stock": {
       "id": 2,
       "quantity": 19,
-      "status": "Envío en el propio contenedor",
+      "status": "Peligroso",
       "warehouse": {
         "id": 2,
         "name": "MAD 2",
@@ -86,7 +86,7 @@
     "stock": {
       "id": 4,
       "quantity": 9,
-      "status": "Envío en el propio contenedor",
+      "status": "Flyer promocional",
       "warehouse": {
         "id": 4,
         "name": "MAD 2",
@@ -143,7 +143,7 @@
     "stock": {
       "id": 7,
       "quantity": 33,
-      "status": "Envío en el propio contenedor",
+      "status": "Plegable",
       "warehouse": {
         "id": 7,
         "name": "BCN 5",
@@ -181,7 +181,7 @@
     "stock": {
       "id": 9,
       "quantity": 9,
-      "status": "Envío en el propio contenedor",
+      "status": "Plegable",
       "warehouse": {
         "id": 12,
         "name": "PAR 3",
