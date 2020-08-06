@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Product } from '../Models/product.model';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
@@ -6,37 +7,13 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ProductsService {
-  //private products: Product[];
+  products: Product[] = [];
+  gnome: Product;
 
-  constructor( ) {
-  }
+  constructor() {}
 
   public getProducts(): Observable<Product[]> {
     const products = require('./products.json');
-    return of(products).pipe(tap(data => console.log(data)));
+    return of(products).pipe(tap((data) => console.log('service ', data)));
   }
-}
-
-export interface Product {
-  id: number;
-  name: string;
-  sku: string;
-  barcode: string;
-  image: string;
-  price: string;
-  enabled: boolean;
-  stock: Stock;
-}
-
-export interface Stock {
-  id: number;
-  quantity: number;
-  status: string;
-  warehouse: Warehouse;
-}
-
-export interface Warehouse {
-  id: number;
-  name: string;
-  city: string;
 }

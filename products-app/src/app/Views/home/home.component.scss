@@ -1,63 +1,145 @@
 @import "../../../styles.scss";
 
-.table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: $dark;
-    margin: auto;
+.headerProductsGrid,
+.productsGrid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 1px;
+    justify-items: stretch;
+    align-items: center;
+    align-self: center;
     background-color: white;
-    padding: 2%;
-    border-radius: $border-radius $border-radius 0 0;
     @include commonText;
-
-    .grey-box {
-        width: 40px;
-        height: 40px;
-        background-color: rgba($grey, 70%);
-    }
-    th,
-    td {
-        border-bottom: 1px solid darken($color: rgba($light, 96%), $amount: 10%);
-        padding: 1.2rem 2.2rem;
-        vertical-align: middle;
-    }
-    tr:last-child {
-        th,
-        td {
-            border-bottom: none !important;
+    .clkProductGrid {
+        display: grid;
+        grid-template-rows: auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 1px;
+        justify-items: stretch;
+        align-items: center;
+        align-self: center;
+        background-color: white;
+        font-weight: 300;
+        @media (max-width: 992px) {
+            grid-template-columns: 30% 35% 35%;
         }
-    }
-    th,
-    td,
-    thead th,
-    thead td {
-        border-top: none;
-    }
-    thead {
-        tr {
-            transition: all 0.5s ease-in;
-            th {
-                color: darken($color: rgba($grey, 100%), $amount: 10%);
-                font-weight: 300;
+        @media (min-width: 992px) {
+            grid-template-columns: 65% 18% 17%;
+        }
+        h3 {
+            font-weight: 300;
+            @include commonText;
+        }
+        h3,
+        div {
+            font-weight: 300;
+
+            &:first-child {
+                padding-left: 2rem;
             }
         }
-        th {
-            border-bottom: none;
+    }
+    div {
+        h3 {
+            font-weight: 300;
+            @include commonText;
         }
     }
-    // Sizing
-    .width-46 {
-        width: 46%;
+    @media (max-width: 992px) {
+        grid-template-columns: 80% 20%;
+    }
+    @media (min-width: 992px) {
+        grid-template-columns: 90% 10%;
     }
 }
-.table-hover tbody tr {
-    transition: all 0.5s ease-in;
+.headerProductsGrid {
+    border-radius: $border-radius $border-radius 0 0;
+    color: darken($color: rgba($grey, 100%), $amount: 10%);
+    padding: 1.5rem 0;
 }
-.table-hover tbody tr:hover {
-    color: #000;
-    font-weight: 500;
-    background-color: lighten($color: rgba($grey, 100%), $amount: 30%);
+
+.productsGrid {
+    border-bottom: 1px solid darken($color: rgba($light, 96%), $amount: 10%);
+    transition: all 0.5s $cubic-bezier;
+    .grey-box {
+        background-color: rgba($grey, 70%);
+    }
+    @media (max-width: 1500px) {
+        padding: 0.4rem 0;
+        .grey-box {
+            width: 45px;
+            height: 45px;
+        }
+    }
+    @media (min-width: 1500px) {
+        padding: 0.8rem 0;
+        .grey-box {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+button {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-align: left;
+    text-decoration: none;
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    color: $dark;
+    &:hover {
+        // background-color: lighten($color: rgba($violet, 20%), $amount: 40%);
+        color: darken($color: rgba($dark, 100%), $amount: 20%);
+        font-weight: normal;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.5s $cubic-bezier;
+    }
+    &:focus {
+        outline: none;
+        outline-offset: 0;
+    }
+    label {
+        margin-bottom: 0;
+    }
+}
+// Pagination
+.paginationGrid {
+    padding: 0.5rem 2.2rem 1.2rem 0;
+    width: 100%;
+    display: grid;
+    font-weight: 300;
+    align-items: flex-end;
+    justify-items: right;
+    @include commonText;
+    color: darken($color: rgba($grey, 100%), $amount: 10%);
+    div:first-child {
+        display: grid;
+        grid-template-columns: 3fr auto;
+        justify-items: stretch;
+        align-items: center;
+        align-self: center;
+        select {
+            width: 100%;
+            padding: 0 10px;
+            color: darken($color: rgba($grey, 100%), $amount: 10%);
+            border-bottom: 1px solid darken($color: rgba($light, 96%), $amount: 10%);
+            border-radius: 0;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 992px) {
+        grid-template-columns: 75% auto;
+    }
 }
 .page-link {
     color: darken($color: rgba($grey, 100%), $amount: 30%);
@@ -68,72 +150,17 @@
 .pagination-box {
     border-radius: 0 0 $border-radius $border-radius;
 }
-
 .ngx-pagination .current {
     background: white !important;
     color: darken($color: rgba($grey, 100%), $amount: 30%);
     @include commonText;
 }
+
 // Switch button
-* {
-    box-sizing: border-box;
-}
-
-.m5 {
-    margin: 0 5px;
-}
-
-.switch {
-    display: inline-block;
-}
-.switch input {
-    display: none;
-}
-.switch small {
-    display: inline-block;
-    width: 43px;
-    height: 18px;
-    background-color: rgba($grey, 70%);
-    border-radius: 30px;
-    position: relative;
-    cursor: pointer;
-}
-.switch small:after {
-    content: "No";
-    position: absolute;
-    color: white;
-    font-size: 11px;
-    font-weight: 600;
-    width: 100%;
-    left: 0px;
-    text-align: right;
-    padding: 0 6px;
-    box-sizing: border-box;
-    line-height: 18px;
-}
-.switch small:before {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: white;
-    border-radius: 50%;
-    top: 3px;
-    left: 3px;
-    transition: 0.2s;
-    box-shadow: -3px 0 3px rgba($grey, 70%);
-}
-.switch input:checked ~ small {
-    background-color: $violet;
-    transition: 0.2s;
-}
-.switch input:checked ~ small:before {
-    transform: translate(25px, 0px);
-    transition: 0.2s;
-}
-.switch input:checked ~ small:after {
-    content: "Yes";
-    text-align: left;
+.switch-control {
+    label {
+        margin-bottom: 0;
+    }
 }
 .switchSmall {
     display: inline-block;
@@ -143,30 +170,35 @@
 }
 .switchSmall small {
     display: inline-block;
-    width: 34px;
-    height: 18px;
-    background-color: rgba($grey, 70%);
-    border-radius: 30px;
+    width: 40px;
+    height: 20px;
+    background-color: darken($color: rgba($light, 96%), $amount: 10%);
+    border-radius: 44px;
     position: relative;
     cursor: pointer;
 }
 .switchSmall small:before {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     background-color: white;
     border-radius: 50%;
-    top: 2px;
-    left: 2px;
+    top: 1px;
+    left: 1px;
     transition: 0.2s;
-    box-shadow: -3px 0 3px rgba(0, 0, 0, 0.1);
+    box-shadow: -3px 0 3px rgba(0, 0, 0, 0.2);
 }
 .switchSmall input:checked ~ small {
     background-color: $violet;
-    transition: 0.2s;
+    transition: 0.15s;
 }
 .switchSmall input:checked ~ small:before {
-    transform: translate(16px, 0px);
-    transition: 0.2s;
+    transform: translate(20px, 0px);
+    transition: 0.15s;
+}
+.btnSwitch {
+    background: none;
+    width: 40px;
+    height: 20px;
 }

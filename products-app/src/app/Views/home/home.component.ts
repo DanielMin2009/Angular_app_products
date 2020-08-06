@@ -1,32 +1,52 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductsService, Product } from 'src/app/Services/products.service';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { ProductsService } from 'src/app/Services/products.service';
+import { Product } from 'src/app/Models/product.model';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
-  public products: Product[];
+  @ViewChild('productBox') productBox: ElementRef;
+  public products: Product[] = [];
   public product: Product;
 
   totalProducts: number;
   page: number = 1;
 
-  constructor( public productsService: ProductsService, private router: Router ) {}
+  constructor(
+    public _productsService: ProductsService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getProducts();
   }
 
   public async getProducts(): Promise<void> {
-    this.products = await this.productsService.getProducts().toPromise();
-    this.totalProducts = this.products.length;
+    this._productsService.getProducts().subscribe(
+      (data) => {
+        this.products = data;
+        console.log('What data?', data);
+        localStorage.setItem('products', JSON.stringify(this.products));
+        // console.log(this.products);
+      },
+      (error) => alert('error on load data')
+    );
   }
   viewProduct(idx: number) {
-    console.log(this.product);
-    this.router.navigate(['/product', idx, this.product]);
+    this.router.navigate(['/product', idx]);
+  }
+
+  toggleActivation(e: any) {
+    e.stopPropagation();
+    this.productBox.nativeElement;
+    e.stopPropagation();
+    console.log('click inside input');
+    return false;
   }
 }
+
+

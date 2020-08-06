@@ -8,13 +8,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxPaginationModule } from 'ngx-pagination';
 
-
 // Services
 import { ProductsService } from './Services/products.service';
 
 // Components
 import { NavbarComponent } from './Components/Shared/navbar/navbar.component';
-import { PaginatorComponent } from './Components/Shared/paginator/paginator.component';
 // View Components
 import { HomeComponent } from './Views/home/home.component';
 import { ProductDetailComponent } from './Views/product-detail/product-detail.component';
@@ -24,7 +22,6 @@ import { ProductDetailComponent } from './Views/product-detail/product-detail.co
   declarations: [
     AppComponent,
     NavbarComponent,
-    PaginatorComponent,
     HomeComponent,
     ProductDetailComponent
   ],

@@ -1,9 +1,14 @@
-<header class="banner-area">
-    <nav class="navbar sticky-top navbar-light">
-        <a class="navbar-brand text-center">
-            <h1>Listado de productos</h1>
+<header class="container-fluid">
+    <nav class="navbar sticky-top navbar-light banner-area row">
+        <div [routerLink]="['home']" class="col-2 icon arrowBack-icon"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </div>
+        <a class="navbar-brand text-center col-8">
+            <h1 #title>Listado de productos</h1>
+            <h1 #title class="d-none">product.name</h1>
         </a>
-        <div class="navbar-icon"></div>
+        <div class="col-2 icon add-icon"><i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+        <div class="col-2 icon edit-icon d-none"><i class="fa fa-edit" aria-hidden="true"></i>
+        </div>
     </nav>
 </header>
-

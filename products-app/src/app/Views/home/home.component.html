@@ -1,34 +1,83 @@
 <main class="animated fadeIn fast no-gutters">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th class="width-60" scope="col">Producto</th>
-                <th scope="col">SKU</th>
-                <th scope="col">Código de Barras</th>
-                <th scope="col">Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr
-                *ngFor="let product of products | paginate: { id: 'listing-pagination', itemsPerPage: 10, currentPage: page, totalItems: totalProducts }" >
-                <th class="width-46" scope="row">
-                    <div class="grey-box"></div>
-                </th>
-                <td class="sku">{{product.sku}}</td>
-                <td class="barcode">{{product.barcode}}</td>
-                <td class="status">{{product.stock.status}}</td>
-                <td class="switch-control">
-                    <label class="switchSmall m5">
-                        <input type="checkbox" checked="">
-                        <small></small>
-                    </label>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="container-fluid bg-white pagination-box">
+    <div class="headerProductsGrid">
+        <div class="clkProductGrid">
+            <h3>Producto</h3>
+            <h3>SKU</h3>
+            <h3>Código de Barras</h3>
+        </div>
+        <div>
+            <h3>Estado</h3>
+        </div>
+
+    </div>
+    <article class="productsGrid"
+        *ngFor="let product of products | paginate: { id: 'listing-pagination', itemsPerPage: 10, currentPage: page, totalItems: totalProducts } let i = index">
+        <button (click)="viewProduct(i)" class="clkProductGrid">
+            <div>
+                <div class="grey-box"></div>
+            </div>
+            <div>SKU {{product.sku}}</div>
+            <div>{{product.barcode}}</div>
+        </button>
+        <div class="switch-control">
+            <label class="switchSmall m5">
+                <input class="switchBtn" type="checkbox" checked="">
+                <small></small>
+            </label>
+        </div>
+    </article>
+    <div class="bg-white pagination-box paginationGrid">
+        <div>
+            <span>Ítems por página</span>
+            <select class="form-control">
+                <option>20</option>
+                <option>10</option>
+                <option>5</option>
+            </select>
+        </div>
         <pagination-controls id="listing-pagination" class="pagination justify-content-end" maxSize="10"
             directionLinks="true" (pageChange)="page=$event">
         </pagination-controls>
     </div>
 </main>
+
+<!-- <main class="animated fadeIn fast no-gutters">
+    <div class="headerProductsGrid">
+        <div>Producto</div>
+        <div>SKU</div>
+        <div>Código de Barras</div>
+        <div>Estado</div>
+    </div>
+    <button (click)="viewProduct(i)" class="productsGrid"
+        *ngFor="let product of products | paginate: { id: 'listing-pagination', itemsPerPage: 10, currentPage: page, totalItems: totalProducts } let i = index">
+        <div>
+            <div class="grey-box"></div>
+        </div>
+        <div>SKU {{product.sku}}</div>
+        <div>{{product.barcode}}</div>
+        <div class="switch-control">
+            <label class="switchSmall m5 btnSwitch">
+                <input #productBox matInput (click)="toggleActivation($event)" type="checkbox"
+                    checked="">
+                <small></small>
+            </label>
+        </div>
+        <div>{{product.stock.status}}</div> 
+    </button>
+    <div class="bg-white pagination-box paginationGrid">
+        <div>
+            <span>Ítems por página</span>
+            <select class="form-control">
+                <option>20</option>
+                <option>10</option>
+                <option>5</option>
+            </select>
+        </div>
+        <pagination-controls id="listing-pagination" class="pagination justify-content-end" maxSize="10"
+            directionLinks="true" (pageChange)="page=$event">
+        </pagination-controls>
+    </div>
+</main> -->
+
+
+

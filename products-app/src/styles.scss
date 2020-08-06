@@ -8,10 +8,18 @@ $light: #f5f5f7;
 $grey: #b9b9b9;
 
 // Other Variables
-$border-radius: .5rem;
+$border-radius: 0.5rem;
+$cubic-bezier: cubic-bezier(1, 0, 0.4, 0.46);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: "Gotham", Arial, Helvetica, sans-serif; background-color: $light; }
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: "Gotham", Arial, Helvetica, sans-serif;
+    background-color: $light;
+}
 
 // Fonts
 @mixin commonText {
@@ -21,34 +29,49 @@ body { margin: 0; font-family: "Gotham", Arial, Helvetica, sans-serif; backgroun
         letter-spacing: 0.05rem;
     }
 }
-
-@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
-    font-size: $font-size * 0.1rem;
-
-    @if $line-height==normal {
-        line-height: normal;
-    } @else {
-        line-height: $line-height / $font-size;
-    }
-
-    @if $letter-spacing==normal {
-        letter-spacing: normal;
-    } @else {
-        letter-spacing: #{$letter-spacing / $font-size}em;
-    }
+// Correction Default Styles
+button:focus {
+    outline: none !important;
 }
-
-/* ===== Usage ===== */
-p {
-    @include font-size(12, 18, 1.2);
-    font-size: .88rem;
-    line-height: 1.5; 
-    letter-spacing: 0.1em;
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+    outline: -ms-focus-ring-color auto 0px;
+    outline: -o-focus-ring-color auto 0px;
+    outline: -moz-focus-ring-color auto 0px;
 }
-
+.no-gutters {
+    padding-right: 0;
+    padding-left: 0;
+}
 // Selector
 ::selection {
     color: white;
     background: $violet;
 }
+.bootstrap-select .btn:focus {
+    outline: none !important;
+}
 
+// Common Styles
+.ngx-pagination {
+    line-height: 200%;
+    margin-bottom: 0 !important;
+    a,
+    button,
+    .current {
+        font-size: 0.88rem !important;
+        background: white !important;
+        color: $dark !important;
+    }
+}
+
+.ngx-pagination,
+.ngx-pagination .disabled {
+    @media (max-width: 992px) {
+        padding: 0;
+    }
+}
+
+main {
+    padding-bottom: 66px;
+}
